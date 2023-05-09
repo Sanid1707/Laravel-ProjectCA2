@@ -21,6 +21,8 @@ class Posts extends Migration
             $table->string('image_path');
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
+            $table->integer('likes');
+            $table->integer('dislikes');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

@@ -57,7 +57,9 @@ class PostsController extends Controller
             'description' => $request->input('description'),
             'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
             'image_path' => $newImageName,
-            'user_id' => auth()->user()->id
+            'user_id' => auth()->user()->id,
+            'likes' => 0,
+            'dislikes' => 0
         ]);
 
         return redirect('/blog')
@@ -74,6 +76,28 @@ class PostsController extends Controller
     {
         return view('blog.show')
             ->with('post', Post::where('slug', $slug)->first());
+    }
+
+    public function likePost($slug)
+    {    
+        $post = Post::where('slug', $slug)->first();
+        $post->likes = $post->likes + 1;
+        $post->dislikes = $post->dislikes - 1;
+        $post->save();
+
+        return redirect('/blog')
+            ->with('message', 'You liked the post!');
+    }
+
+    public function dislikePost($slug) 
+    {
+        $post = Post::where('slug', $slug)->first();
+        $post->dislikes = $post->dislikes + 1;
+        $post->likes = $post->likes - 1;
+        $post->save();
+
+        return redirect('/blog')
+            ->with('message', 'You disliked the post!');
     }
 
     /**
