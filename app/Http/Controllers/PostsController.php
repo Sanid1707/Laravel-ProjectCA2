@@ -82,7 +82,13 @@ class PostsController extends Controller
     {    
         $post = Post::where('slug', $slug)->first();
         $post->likes = $post->likes + 1;
+        
         $post->dislikes = $post->dislikes - 1;
+
+        if($post->dislikes < 0) {
+            $post->dislikes = 0;
+        }
+
         $post->save();
 
         return redirect('/blog')
@@ -94,6 +100,11 @@ class PostsController extends Controller
         $post = Post::where('slug', $slug)->first();
         $post->dislikes = $post->dislikes + 1;
         $post->likes = $post->likes - 1;
+
+        if($post->likes < 0) {
+            $post->likes = 0;
+        }
+        
         $post->save();
 
         return redirect('/blog')
@@ -111,6 +122,8 @@ class PostsController extends Controller
         return view('blog.edit')
             ->with('post', Post::where('slug', $slug)->first());
     }
+
+
 
     /**
      * Update the specified resource in storage.
