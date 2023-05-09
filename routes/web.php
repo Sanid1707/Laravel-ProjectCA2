@@ -19,6 +19,10 @@ Route::get('/', [PagesController::class, 'index']);
 
 Route::resource('/blog', PostsController::class);
 
+Route::get('/blog/like/{update}',  [PostsController::class, 'likePost']);
+
+Route::get('/blog/dislike/{update}',  [PostsController::class, 'dislikePost']);
+
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');

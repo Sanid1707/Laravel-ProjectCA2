@@ -57,7 +57,9 @@ class PostsController extends Controller
             'description' => $request->input('description'),
             'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
             'image_path' => $newImageName,
-            'user_id' => auth()->user()->id
+            'user_id' => auth()->user()->id,
+            'likes' => 0,
+            'dislikes' => 0
         ]);
 
         return redirect('/blog')
@@ -76,6 +78,39 @@ class PostsController extends Controller
             ->with('post', Post::where('slug', $slug)->first());
     }
 
+    public function likePost($slug)
+    {    
+        $post = Post::where('slug', $slug)->first();
+        $post->likes = $post->likes + 1;
+        
+        $post->dislikes = $post->dislikes - 1;
+
+        if($post->dislikes < 0) {
+            $post->dislikes = 0;
+        }
+
+        $post->save();
+
+        return redirect('/blog')
+            ->with('message', 'You liked the post!');
+    }
+
+    public function dislikePost($slug) 
+    {
+        $post = Post::where('slug', $slug)->first();
+        $post->dislikes = $post->dislikes + 1;
+        $post->likes = $post->likes - 1;
+
+        if($post->likes < 0) {
+            $post->likes = 0;
+        }
+        
+        $post->save();
+
+        return redirect('/blog')
+            ->with('message', 'You disliked the post!');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -87,6 +122,8 @@ class PostsController extends Controller
         return view('blog.edit')
             ->with('post', Post::where('slug', $slug)->first());
     }
+
+
 
     /**
      * Update the specified resource in storage.

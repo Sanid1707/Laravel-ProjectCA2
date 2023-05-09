@@ -37,6 +37,10 @@
                 {{ $post->title }}
             </h2>
 
+           
+            <p>Likes : {{ $post->likes }}</p>
+            <p>Dislikes : {{ $post->dislikes }}</p>
+
             <span class="text-gray-500">
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}
             </span>
@@ -49,7 +53,20 @@
                 Keep Reading
             </a>
 
+            <a href="/blog/like/{{ $post->slug }}" class="uppercase bg-green-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+                Like
+            </a>
+
+            <a href="/blog/dislike/{{ $post->slug }}" class="uppercase bg-red-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+                Dislike
+            </a>
+
+            
+
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+            <a href="/blog/{{ $post->slug }}/edit1" class="uppercase bg-yellow-500 text-gray-100 text-lg font-extrabold py-4">
+                edit test
+            </a>
                 <span class="float-right">
                     <a 
                         href="/blog/{{ $post->slug }}/edit"
