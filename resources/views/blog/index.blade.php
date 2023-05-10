@@ -64,9 +64,6 @@
             
 
             @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
-            <a href="/blog/{{ $post->slug }}/edit1" class="uppercase bg-yellow-500 text-gray-100 text-lg font-extrabold py-4">
-                edit test
-            </a>
                 <span class="float-right">
                     <a 
                         href="/blog/{{ $post->slug }}/edit"
