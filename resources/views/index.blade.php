@@ -79,27 +79,21 @@
     </p>
 </div>
 
-<div class="sm:grid grid-cols-2 w-4/5 m-auto">
-    <div class="flex bg-yellow-700 text-gray-100 pt-10">
-        <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
-            <span class="uppercase text-xs">
-                PHP
-            </span>
-
-            <h3 class="text-xl font-bold py-10">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas necessitatibus dolorum error culpa
-                laboriosam. Enim voluptas earum repudiandae consequuntur ad? Expedita labore aspernatur facilis quasi
-                ex? Nemo hic placeat et?
-            </h3>
-
-            <a href=""
-                class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-                Find Out More
-            </a>
-        </div>
+<div class="flex flex-col md:flex-row justify-center gap-6 mx-auto text-center">
+  @foreach ($posts as $post)
+  <div class="w-72 md:w-1/3 h-72 bg-cover bg-center relative" style="background-image: url('{{ asset('images/' . $post->image_path) }}')">
+    <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 text-white py-10 px-6">
+      <h1 class="uppercase text-xl font-bold pb-8">{{ $post->title }}</h1>
+      <a href="/blog/{{ $post->slug }}" class="uppercase bg-transparent border-2 border-gray-100 text-white text-xs font-extrabold py-3 px-5 rounded-3xl hover:bg-gray-100 hover:text-black">
+        Find Out More
+      </a>
     </div>
-    <div>
-        <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="">
-    </div>
+  </div>
+  @endforeach
 </div>
+
+
+
+
+
 @endsection
