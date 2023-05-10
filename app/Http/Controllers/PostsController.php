@@ -62,6 +62,7 @@ class PostsController extends Controller
             'dislikes' => 0
         ]);
 
+
         return redirect('/blog')
             ->with('message', 'Your post has been added!');
     }
