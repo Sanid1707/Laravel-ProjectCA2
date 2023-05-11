@@ -18,7 +18,7 @@ This project has been made possible with the contributions of the following indi
 
 ## Installation
 1. Clone the repository: `git clone 
-https://docs.google.com/spreadsheets/d/1boLH2zSVM5FSmNsGxYcJkThfYFdJl6yUJHRQdSJ6vB0/edit#gid=0`
+laravel-8-complete-blog`
 2. Navigate to the project directory: `cd laravel-8-complete-blog`
 3. Install dependencies: `composer install`
 4. Create a copy of the `.env.example` file and rename it to `.env`: `cp .env.example .env`
