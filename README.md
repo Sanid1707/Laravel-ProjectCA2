@@ -1,4 +1,4 @@
-![giphy](https://user-images.githubusercontent.com/97777378/224152467-645cc882-73cc-4da3-bdb1-165809fe0b11.gif)
+![giphy](https://raw.githubusercontent.com/Sanid1707/Laravel-ProjectCA2/main/public/images/readme.gif)
 # Traveling Blog Website
 
 This is a PHP Laravel-based traveling blog website where users can register, log in, and share their travel experiences through blog posts. Users who are logged in have the ability to edit or delete their own posts. The project has been supported by Evan, Jason, and Sani.
@@ -18,7 +18,7 @@ This project has been made possible with the contributions of the following indi
 
 ## Installation
 1. Clone the repository: `git clone 
-https://docs.google.com/spreadsheets/d/1boLH2zSVM5FSmNsGxYcJkThfYFdJl6yUJHRQdSJ6vB0/edit#gid=0`
+laravel-8-complete-blog`
 2. Navigate to the project directory: `cd laravel-8-complete-blog`
 3. Install dependencies: `composer install`
 4. Create a copy of the `.env.example` file and rename it to `.env`: `cp .env.example .env`
