@@ -19,8 +19,8 @@
         </div>
     </div>
 
-
-<div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+<!-- tiao edit this :3 -->
+<!-- <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
     <div>
         <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
     </div>
@@ -62,7 +62,7 @@
     <span class="font-extrabold block text-4xl py-1">
         Backend Development
     </span>
-</div>
+</div> -->
 
 <div class="text-center py-15">
     <span class="uppercase text-s text-gray-400">
@@ -77,7 +77,7 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos
         temporibus quaerat facere consectetur qui.
     </p>
-</div>
+</div> 
 
 <div class="flex flex-col md:flex-row justify-center gap-6 mx-auto text-center">
   @foreach ($posts as $post)

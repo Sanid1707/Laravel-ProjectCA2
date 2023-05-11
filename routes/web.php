@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\YourPostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +27,10 @@ Route::get('/blog/like/{update}',  [PostsController::class, 'likePost']);
 Route::get('/blog/dislike/{update}',  [PostsController::class, 'dislikePost']);
 
 Route::resource('/profile', ProfileController::class);
+
+Route::resource('/settings', SettingsController::class);
+
+Route::resource('/your-posts', YourPostsController::class);
 
 Auth::routes();
 
