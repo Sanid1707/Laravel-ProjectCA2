@@ -11,10 +11,6 @@
         <div class="w-full">
             <div class="h-screen">
                 <img src="{{ asset('images/travelPhoto2.jpg') }}" alt="Right Photo" class="w-full h-full object-cover">
-                <a href="/blog" class="absolute bottom-4 left-4">
-                    <button
-                        class="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded">View Blogs</button>
-                </a>
             </div>
         </div>
     </div>
