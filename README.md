@@ -1,4 +1,4 @@
-![giphy](https://user-images.githubusercontent.com/97777378/224152467-645cc882-73cc-4da3-bdb1-165809fe0b11.gif)
+![giphy](https://raw.githubusercontent.com/Sanid1707/Laravel-ProjectCA2/main/public/images/readme.gif)
 # Traveling Blog Website
 
 This is a PHP Laravel-based traveling blog website where users can register, log in, and share their travel experiences through blog posts. Users who are logged in have the ability to edit or delete their own posts. The project has been supported by Evan, Jason, and Sani.
