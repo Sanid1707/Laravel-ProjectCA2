@@ -15,51 +15,44 @@
     </div>
 </div>
 
-<div class="flex flex-col sm:flex-row justify-between items-center bg-gray-200 py-16 px-6">
-    <div class="w-full sm:w-1/2">
-        <h2 class="text-3xl font-extrabold text-gray-800 mb-6">
-            Explore the World through Captivating Travel Blogs
-        </h2>
-        <p class="text-lg text-gray-600 mb-8">
-            Immerse yourself in inspiring travel stories and experiences shared by passionate globetrotters. Discover
-            hidden gems, breathtaking destinations, and valuable insights that will ignite your wanderlust.
-        </p>
-        <a href="/blog" class="bg-blue-500 text-white text-lg font-semibold py-3 px-8 rounded-full hover:bg-blue-600">
-            Find Out More
-        </a>
-    </div>
-    <div class="w-full sm:w-1/2 mt-8 sm:mt-0">
-        <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" alt="Travel Blog Image"
-            class="w-full">
-    </div>
-</div>
+<main class="container mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold mb-6">Amazing Destinations!</h1>
 
-<div class="bg-black text-white py-16 px-6">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="text-2xl font-bold text-center text-white mb-8">
-            I'm an Expert in...
-        </h2>
-        <div class="grid grid-cols-2 gap-6">
-            <div class="text-center">
-                <span class="text-3xl font-semibold block mb-2">Exploring New Cultures</span>
-                <span class="text-lg text-gray-300">Discovering diverse traditions, customs, and local
-                    lifestyles.</span>
-            </div>
-            <div class="text-center">
-                <span class="text-3xl font-semibold block mb-2">Adventure Photography</span>
-                <span class="text-lg text-gray-300">Capturing breathtaking moments and stunning landscapes.</span>
-            </div>
-            <div class="text-center">
-                <span class="text-3xl font-semibold block mb-2">Solo Travel Tips</span>
-                <span class="text-lg text-gray-300">Unleashing the joys and challenges of traveling alone.</span>
-            </div>
-            <div class="text-center">
-                <span class="text-3xl font-semibold block mb-2">Food and Culinary Experiences</span>
-                <span class="text-lg text-gray-300">Indulging in authentic flavors and gastronomic adventures.</span>
-            </div>
-        </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="mb-8">
+      <img src="{{ asset('images/image1.jpg') }}" alt="Image 1" class="w-full h-auto rounded-lg">
+      <h2 class="text-2xl font-bold mt-4">Exploring the Beautiful Beaches of Bali</h2>
+      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis auctor erat sit amet lacinia.</p>
     </div>
-</div>
+
+    <div class="mb-8">
+      <img src="{{ asset('images/image2.jpg') }}" alt="Image 2" class="w-full h-auto rounded-lg">
+      <h2 class="text-2xl font-bold mt-4">Hiking Adventures in the Swiss Alps</h2>
+      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis auctor erat sit amet lacinia.</p>
+    </div>
+  </div>
+
+  <div class="mb-8">
+    <img src="{{ asset('images/image3.jpg') }}" alt="Image 3" class="w-full h-auto rounded-lg">
+    <h2 class="text-2xl font-bold mt-4">Cultural Delights in Kyoto, Japan</h2>
+    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis auctor erat sit amet lacinia.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="mb-8">
+      <img src="{{ asset('images/image4.jpg') }}" alt="Image 4" class="w-full h-auto rounded-lg">
+      <h2 class="text-2xl font-bold mt-4">Foodie Adventures in Italy</h2>
+      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis auctor erat sit amet lacinia.</p>
+    </div>
+
+    <div class="mb-8">
+      <img src="{{ asset('images/image5.jpg') }}" alt="Image 5" class="w-full h-auto rounded-lg">
+      <h2 class="text-2xl font-bold mt-4">Road Trip Through the American Southwest</h2>
+      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis auctor erat sit amet lacinia.</p>
+    </div>
+  </div>
+</main>
+
 
 
 <div class="text-center py-15">
