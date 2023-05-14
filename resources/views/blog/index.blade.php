@@ -38,10 +38,10 @@
 
         <div class="flex items-center text-gray-500 mb-4">
             <span class="mr-2">
-                <i class="far fa-thumbs-up"></i> {{ $post->likes }}
+                Likes {{ $post->likes }}
             </span>
             <span class="mr-2">
-                <i class="far fa-thumbs-down"></i> {{ $post->dislikes }}
+                Dislikes {{ $post->dislikes }}
             </span>
             <span>
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on
