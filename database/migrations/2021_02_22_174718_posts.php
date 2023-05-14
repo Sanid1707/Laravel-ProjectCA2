@@ -23,6 +23,7 @@ class Posts extends Migration
             $table->unsignedBigInteger('user_id');
             $table->integer('likes')->default(0);
             $table->integer('dislikes')->default(0);
+            $table->integer('is_public')->default(0);
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
