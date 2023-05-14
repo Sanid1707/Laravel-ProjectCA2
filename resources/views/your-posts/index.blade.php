@@ -5,7 +5,7 @@
 <div class="w-4/5 m-auto text-left">
     <div class="py-15 border-b border-gray-200">
         <h1 class="text-4xl">
-        <span>Your Posts</span>
+            <span>Your Posts</span>
         </h1>
     </div>
 </div>
@@ -52,6 +52,22 @@
                     Delete
                 </button>
             </form>
+        </span>
+
+        <span class="float-right">
+            @if ($post->is_public == 0)
+                <a href="/blog/private/{{ $post->slug }}"
+                    class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                    Make Private
+                </a>
+                <br>
+            @else
+                <a href="/blog/public/{{ $post->slug }}"
+                    class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                    Make Public
+                </a>
+                <br>
+            @endif
         </span>
         @endif
     </div>
