@@ -43,6 +43,7 @@
             <span class="mr-2">
                 Dislikes {{ $post->dislikes }}
             </span>
+            <br>
             <span>
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on
                 {{ date('jS M Y', strtotime($post->updated_at)) }}
