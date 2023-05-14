@@ -112,6 +112,26 @@ class PostsController extends Controller
             ->with('message', 'You disliked the post!');
     }
 
+    public function privatePost($slug)
+    {
+        $post = Post::where('slug', $slug)->first();
+        $post->is_public = 1;
+        $post->save();
+
+        return redirect('/blog')
+            ->with('message', 'You made the post private!');
+    }
+
+    public function publicPost($slug)
+    {
+        $post = Post::where('slug', $slug)->first();
+        $post->is_public = 0;
+        $post->save();
+
+        return redirect('/blog')
+            ->with('message', 'You made the post public!');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
