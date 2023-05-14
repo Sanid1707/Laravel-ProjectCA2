@@ -16,5 +16,14 @@ class ProfileController extends Controller {
             return view('profile.index')
                 ->with('posts', auth()->user()->post()->orderBy('created_at', 'DESC')->paginate(5));
         }
+
+        
+        public function deleteAccount() {
+            $user = auth()->user();
+            Post::where('user_id', $user->id)->delete();
+            $user->delete();
+            return redirect()->route('home')->with('message', 'Your account has been deleted.');
+        }
+
         
 }

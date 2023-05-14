@@ -6,6 +6,7 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\YourPostsController;
+use App\Http\Controllers\DeleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,10 @@ Route::get('/blog/dislike/{update}',  [PostsController::class, 'dislikePost']);
 Route::get('/blog/private/{update}',  [PostsController::class, 'privatePost']);
 
 Route::get('/blog/public/{update}',  [PostsController::class, 'publicPost']);
+
+Route::get('/profile/delete-account', [ProfileController::class, 'deleteAccount']);
+
+Route::get('/profile/confirm-delete-account', [DeleteController::class, 'index']);
 
 Route::resource('/profile', ProfileController::class);
 

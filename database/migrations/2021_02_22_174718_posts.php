@@ -24,7 +24,7 @@ class Posts extends Migration
             $table->integer('likes')->default(0);
             $table->integer('dislikes')->default(0);
             $table->integer('is_public')->default(0);
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
