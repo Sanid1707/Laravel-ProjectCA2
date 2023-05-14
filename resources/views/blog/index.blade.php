@@ -27,6 +27,7 @@
 @endif
 
 @foreach ($posts as $post)
+@if($post->is_public == 0)
 <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
     <div>
         <img src="{{ asset('images/' . $post->image_path) }}" alt="{{ $post->title }}" class="rounded-lg">
@@ -43,7 +44,6 @@
             <span class="mr-2">
                 Dislikes {{ $post->dislikes }}
             </span>
-            <br>
             <span>
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on
                 {{ date('jS M Y', strtotime($post->updated_at)) }}
@@ -88,6 +88,7 @@
         @endif
     </div>
 </div>
+@endif
 @endforeach
 
 @endsection
