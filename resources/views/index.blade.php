@@ -16,14 +16,25 @@
 </div>
 
 <main class="container mx-auto px-4 py-8">
-  <h1 class="text-4xl font-bold mb-6">Amazing Destinations!</h1>
-
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="mb-8">
-      <img src="{{ asset('images/image1.jpg') }}" alt="Image 1" class="w-full h-auto rounded-lg">
-      <h2 class="text-2xl font-bold mt-4">Exploring the Beautiful Beaches of Bali</h2>
-      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis auctor erat sit amet lacinia.</p>
-    </div>
+  <div class="mb-8">
+  <h2 class="text-2xl font-bold mt-4">Latest Post</h2>
+  
+  @if(count($posts) > 0)
+    @php
+      $latestPost = $posts->first();
+    @endphp
+    <h2 class="text-2xl font-bold mt-4">{{ $latestPost->title }}</h2>
+    <img src="{{ asset('images/' . $latestPost->image_path) }}" alt="Latest Post Image" class="w-full h-auto rounded-lg">
+    <a href="/blog/{{ $latestPost->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl mt-15 hover:bg-blue-400 hover:text-gray-200">
+      Read More
+    </a>
+  @else
+    <p class="text-center w-full text-2xl">
+      No posts found
+    </p>
+  @endif
+</div>
 
     <div class="mb-8">
       <img src="{{ asset('images/image2.jpg') }}" alt="Image 2" class="w-full h-auto rounded-lg">
