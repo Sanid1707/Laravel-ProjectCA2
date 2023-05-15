@@ -14,7 +14,7 @@ This project has been made possible with the contributions of the following indi
 <br>
 - Evan<br>
 - Jason<br>
-- Sani<br>
+- Sanidhya<br>
 
 ## Installation
 1. Clone the repository: `git clone 
